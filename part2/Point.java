@@ -24,7 +24,7 @@ public class Point
       /*double angle = Math.atan((Math.abs(x))/(Math.abs(y)));
       if(x < 0)
          angle += 
-      */ return Math.atan
+      */
    }
 
    public Point rotate90()
