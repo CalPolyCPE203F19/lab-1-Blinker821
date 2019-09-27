@@ -7,7 +7,11 @@ class SimpleLoop
          done without a loop, but the point is to
          practice the syntax for a loop.
       */
-
-      return 0;
+      int count = 0;
+      for(int i = low; i <= high; i++)
+      {
+         count += i;
+      }
+      return count;
    }
 }

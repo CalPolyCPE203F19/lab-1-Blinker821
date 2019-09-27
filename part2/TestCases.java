@@ -26,6 +26,66 @@ public class TestCases
       assertEquals(1.0, new Point(1.0, 2.0).getX(), DELTA);
    }
 
+
+   @Test
+   public void testGetY()
+   {
+      assertEquals(3.2, new Point(4.0, 3.2).getY(), DELTA);
+   }
+
+   @Test
+   public void testGetRadius1()
+   {
+      assertEquals(5, new Point(3.0, 4.0).getRadius(), DELTA);
+   }
+
+   @Test
+   public void testGetRadius2()
+   {
+      assertEquals(5, new Point(-3.0, 4.0).getRadius(), DELTA);
+   }
+
+   @Test
+   public void testRotate90One()
+   {
+      Point end = new Point(-4.0, 1.0);
+      Point start = new Point(1.0, 4.0);
+      start = start.rotate90();
+      assertEquals(start.getX(), end.getX(), DELTA);
+      assertEquals(start.getY(), end.getY(), DELTA);
+   }
+
+   @Test
+   public void testRotate90Two()
+   {
+      Point end = new Point(-1.0,-4.0);
+      Point start = new Point(-4.0, 1.0);
+      start = start.rotate90();
+      assertEquals(start.getX(), end.getX(), DELTA);
+      assertEquals(start.getY(), end.getY(), DELTA);
+   }
+
+   @Test
+   public void testRotate90Three()
+   {
+      Point end = new Point(4.0, -1.0);
+      Point start = new Point(-1.0, -4.0);
+      start = start.rotate90();
+      assertEquals(start.getX(), end.getX(), DELTA);
+      assertEquals(start.getY(), end.getY(), DELTA);
+   }
+
+   @Test
+   public void testRotate90Four()
+   {
+      Point end = new Point(1.0, 4.0);
+      Point start = new Point(4.0, -1.0);
+      start = start.rotate90();
+      assertEquals(start.getX(), end.getX(), DELTA);
+      assertEquals(start.getY(), end.getY(), DELTA);
+   }
+
+
    /*
     * The tests below here are to verify the basic requirements regarding
     * the "design" of your class.  These are to remain unchanged.

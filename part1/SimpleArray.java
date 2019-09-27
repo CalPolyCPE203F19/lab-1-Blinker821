@@ -6,7 +6,7 @@ class SimpleArray
          input array.  The length of an array is accessible through
          an array's length field (e.g., values.length).
       */
-      int [] newValues = new int[1];  // This allocates an array of integers.
+      int [] newValues = new int[values.length];  // This allocates an array of integers.
 
       /* TO DO: The output array, newValues, should hold as
          its elements the square of the corresponding element
@@ -16,6 +16,11 @@ class SimpleArray
          input array and to place the result into the output array.
       */
 
+      for(int i = 0; i < values.length; i++)
+      {
+         double temp = Math.pow(values[i], 2);
+         newValues[i] = (int) temp;
+      }
       return newValues;
    }
 }
