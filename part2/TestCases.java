@@ -46,6 +46,48 @@ public class TestCases
    }
 
    @Test
+   public void testGetAngle1()
+   {
+      assertEquals(0.588002, new Point(3, 2).getAngle(), DELTA);
+   }
+
+   @Test
+   public void testGetAngle2()
+   {
+      assertEquals(-0.588002, new Point(3, -2).getAngle(), DELTA);
+   }
+
+   @Test
+   public void testGetAngle3()
+   {
+      assertEquals(2.55359, new Point(-3, 2).getAngle(), DELTA);
+   }
+
+   @Test
+   public void testGetAngle4()
+   {
+      assertEquals(-2.55359, new Point(-3, -2).getAngle(), DELTA);
+   }
+
+   @Test
+   public void testGetAngle5()
+   {
+      assertEquals(0.0, new Point(3, 0).getAngle(), DELTA);
+   }
+
+   @Test
+   public void testGetAngle6()
+   {
+      assertEquals(Math.PI/2, new Point(0, 3).getAngle(), DELTA);
+   }
+
+   @Test
+   public void testGetAngle7()
+   {
+      assertEquals(0.0, new Point(0, 0).getAngle(), DELTA);
+   }   
+
+   @Test
    public void testRotate90One()
    {
       Point end = new Point(-4.0, 1.0);

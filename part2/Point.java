@@ -20,11 +20,19 @@ public class Point
 
    public double getAngle()
    {
-       return 0.0;
-      /*double angle = Math.atan((Math.abs(x))/(Math.abs(y)));
-      if(x < 0)
-         angle += 
-      */
+      if(y == 0)
+         return 0.0;
+      if(x == 0)
+         return Math.PI/2;
+
+      double angle = Math.asin(y / getRadius());
+
+      if(x < 0 && y < 0)
+         angle = -1 * Math.PI - angle;     
+      else if(x < 0)
+         angle = Math.PI - angle;
+
+      return angle;
    }
 
    public Point rotate90()
